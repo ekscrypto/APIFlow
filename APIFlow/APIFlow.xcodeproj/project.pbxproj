@@ -10,7 +10,7 @@
 		780BF93022219062002BDD04 /* APIFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780BF92622219062002BDD04 /* APIFlow.framework */; };
 		780BF93522219062002BDD04 /* APIFlow_FlowControlDecisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF93422219062002BDD04 /* APIFlow_FlowControlDecisionTests.swift */; };
 		780BF93722219062002BDD04 /* APIFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = 780BF92922219062002BDD04 /* APIFlow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		780BF94822219178002BDD04 /* APIFlowAction+getRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF94222219178002BDD04 /* APIFlowAction+getRequest.swift */; };
+		780BF94822219178002BDD04 /* APIFlowAction+generateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF94222219178002BDD04 /* APIFlowAction+generateRequest.swift */; };
 		780BF94922219178002BDD04 /* APIFlowRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF94322219178002BDD04 /* APIFlowRequest.swift */; };
 		780BF94A22219178002BDD04 /* APIFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF94422219178002BDD04 /* APIFlow.swift */; };
 		780BF94B22219178002BDD04 /* APIFlowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF94522219178002BDD04 /* APIFlowAction.swift */; };
@@ -19,6 +19,10 @@
 		780BF94F22219E55002BDD04 /* APIFlowHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF94E22219E55002BDD04 /* APIFlowHelpers.swift */; };
 		780BF9532221A120002BDD04 /* APIFlow_ActionsHandlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF9522221A120002BDD04 /* APIFlow_ActionsHandlingTests.swift */; };
 		780BF9552221A176002BDD04 /* APIFlow_ResumeLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF9542221A176002BDD04 /* APIFlow_ResumeLogicTests.swift */; };
+		780BF95A2221D773002BDD04 /* APIFlowAction+call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF9592221D773002BDD04 /* APIFlowAction+call.swift */; };
+		780BF95F2221D98E002BDD04 /* APIFlowAction+decodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF95E2221D98E002BDD04 /* APIFlowAction+decodeTests.swift */; };
+		780BF9612221DB0F002BDD04 /* APIFlowAction+dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF9602221DB0F002BDD04 /* APIFlowAction+dispatch.swift */; };
+		780BF9652221E1ED002BDD04 /* APIFlowAction+encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF9642221E1ED002BDD04 /* APIFlowAction+encode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,15 +42,19 @@
 		780BF92F22219062002BDD04 /* APIFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		780BF93422219062002BDD04 /* APIFlow_FlowControlDecisionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFlow_FlowControlDecisionTests.swift; sourceTree = "<group>"; };
 		780BF93622219062002BDD04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		780BF94222219178002BDD04 /* APIFlowAction+getRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "APIFlowAction+getRequest.swift"; path = "../../APIFlow-Common/APIFlowAction+getRequest.swift"; sourceTree = "<group>"; };
+		780BF94222219178002BDD04 /* APIFlowAction+generateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIFlowAction+generateRequest.swift"; sourceTree = "<group>"; };
 		780BF94322219178002BDD04 /* APIFlowRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIFlowRequest.swift; path = "../../APIFlow-Common/APIFlowRequest.swift"; sourceTree = "<group>"; };
 		780BF94422219178002BDD04 /* APIFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIFlow.swift; path = "../../APIFlow-Common/APIFlow.swift"; sourceTree = "<group>"; };
 		780BF94522219178002BDD04 /* APIFlowAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIFlowAction.swift; path = "../../APIFlow-Common/APIFlowAction.swift"; sourceTree = "<group>"; };
-		780BF94622219178002BDD04 /* APIFlowAction+decode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "APIFlowAction+decode.swift"; path = "../../APIFlow-Common/APIFlowAction+decode.swift"; sourceTree = "<group>"; };
-		780BF94722219178002BDD04 /* APIFlowAction+generateUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "APIFlowAction+generateUrl.swift"; path = "../../APIFlow-Common/APIFlowAction+generateUrl.swift"; sourceTree = "<group>"; };
+		780BF94622219178002BDD04 /* APIFlowAction+decode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIFlowAction+decode.swift"; sourceTree = "<group>"; };
+		780BF94722219178002BDD04 /* APIFlowAction+generateUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIFlowAction+generateUrl.swift"; sourceTree = "<group>"; };
 		780BF94E22219E55002BDD04 /* APIFlowHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFlowHelpers.swift; sourceTree = "<group>"; };
 		780BF9522221A120002BDD04 /* APIFlow_ActionsHandlingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFlow_ActionsHandlingTests.swift; sourceTree = "<group>"; };
 		780BF9542221A176002BDD04 /* APIFlow_ResumeLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFlow_ResumeLogicTests.swift; sourceTree = "<group>"; };
+		780BF9592221D773002BDD04 /* APIFlowAction+call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIFlowAction+call.swift"; sourceTree = "<group>"; };
+		780BF95E2221D98E002BDD04 /* APIFlowAction+decodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "APIFlowAction+decodeTests.swift"; path = "APIFlowTests/APIFlowAction+decodeTests.swift"; sourceTree = SOURCE_ROOT; };
+		780BF9602221DB0F002BDD04 /* APIFlowAction+dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIFlowAction+dispatch.swift"; sourceTree = "<group>"; };
+		780BF9642221E1ED002BDD04 /* APIFlowAction+encode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIFlowAction+encode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +99,7 @@
 			children = (
 				780BF94422219178002BDD04 /* APIFlow.swift */,
 				780BF94522219178002BDD04 /* APIFlowAction.swift */,
-				780BF94622219178002BDD04 /* APIFlowAction+decode.swift */,
-				780BF94722219178002BDD04 /* APIFlowAction+generateUrl.swift */,
-				780BF94222219178002BDD04 /* APIFlowAction+getRequest.swift */,
+				780BF95B2221D944002BDD04 /* Actions */,
 				780BF94322219178002BDD04 /* APIFlowRequest.swift */,
 				780BF92922219062002BDD04 /* APIFlow.h */,
 				780BF92A22219062002BDD04 /* Info.plist */,
@@ -119,6 +125,36 @@
 				780BF9542221A176002BDD04 /* APIFlow_ResumeLogicTests.swift */,
 			);
 			path = "APIFlow Class Tests";
+			sourceTree = "<group>";
+		};
+		780BF95B2221D944002BDD04 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				780BF95D2221D964002BDD04 /* Call */,
+				780BF95C2221D95D002BDD04 /* Decode */,
+				780BF94722219178002BDD04 /* APIFlowAction+generateUrl.swift */,
+				780BF94222219178002BDD04 /* APIFlowAction+generateRequest.swift */,
+				780BF9642221E1ED002BDD04 /* APIFlowAction+encode.swift */,
+				780BF9602221DB0F002BDD04 /* APIFlowAction+dispatch.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		780BF95C2221D95D002BDD04 /* Decode */ = {
+			isa = PBXGroup;
+			children = (
+				780BF94622219178002BDD04 /* APIFlowAction+decode.swift */,
+				780BF95E2221D98E002BDD04 /* APIFlowAction+decodeTests.swift */,
+			);
+			path = Decode;
+			sourceTree = "<group>";
+		};
+		780BF95D2221D964002BDD04 /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				780BF9592221D773002BDD04 /* APIFlowAction+call.swift */,
+			);
+			path = Call;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,10 +268,13 @@
 			files = (
 				780BF94922219178002BDD04 /* APIFlowRequest.swift in Sources */,
 				780BF94C22219178002BDD04 /* APIFlowAction+decode.swift in Sources */,
+				780BF9612221DB0F002BDD04 /* APIFlowAction+dispatch.swift in Sources */,
 				780BF94A22219178002BDD04 /* APIFlow.swift in Sources */,
 				780BF94B22219178002BDD04 /* APIFlowAction.swift in Sources */,
-				780BF94822219178002BDD04 /* APIFlowAction+getRequest.swift in Sources */,
+				780BF9652221E1ED002BDD04 /* APIFlowAction+encode.swift in Sources */,
+				780BF94822219178002BDD04 /* APIFlowAction+generateRequest.swift in Sources */,
 				780BF94D22219178002BDD04 /* APIFlowAction+generateUrl.swift in Sources */,
+				780BF95A2221D773002BDD04 /* APIFlowAction+call.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +284,7 @@
 			files = (
 				780BF9552221A176002BDD04 /* APIFlow_ResumeLogicTests.swift in Sources */,
 				780BF93522219062002BDD04 /* APIFlow_FlowControlDecisionTests.swift in Sources */,
+				780BF95F2221D98E002BDD04 /* APIFlowAction+decodeTests.swift in Sources */,
 				780BF94F22219E55002BDD04 /* APIFlowHelpers.swift in Sources */,
 				780BF9532221A120002BDD04 /* APIFlow_ActionsHandlingTests.swift in Sources */,
 			);

@@ -10,12 +10,13 @@ import Foundation
 
 extension APIFlowAction {
     public static func upon<T: Decodable>(
-        decoding: T,
-        named actionName: String = "decode",
+        decoding: T.Type,
+        named actionName: String = "JSONDecoder.decode",
         do successAction: @escaping ((_: T, _: APIFlowRequest) -> APIFlow.FlowControl))
-        -> APIFlowAction {
+        -> APIFlowAction
+    {
         let action: APIFlowAction.Action = { (flow) in
-            guard let data = flow.request.data else { return APIFlow.FlowControl.flowThrough }
+            guard let data = flow.request.responseData else { return APIFlow.FlowControl.flowThrough }
             do {
                 let decoded = try JSONDecoder().decode(T.self, from: data)
                 return successAction(decoded, flow.request)

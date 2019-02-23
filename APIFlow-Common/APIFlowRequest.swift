@@ -12,7 +12,8 @@ class APIFlowRequest {
     var url: URL?
     var urlRequest: URLRequest?
     var urlSession: URLSession?
-    var data: Data?
+    var requestData: Data?
+    var responseData: Data?
     var urlResponse: URLResponse?
     var error: Error?
 }

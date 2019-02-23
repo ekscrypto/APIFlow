@@ -48,7 +48,7 @@ class APIFlow {
     private var nextAction: Int = 0
     private let lock = NSLock()
 
-    init(name: String, request: APIFlowRequest = APIFlowRequest(), actions: [APIFlowAction]) {
+    init(name: String = "", request: APIFlowRequest = APIFlowRequest(), actions: [APIFlowAction]) {
         self.name = name
         self.request = request
         self.actions = actions
@@ -110,6 +110,7 @@ class APIFlow {
             } catch {
                 logs.append(Log(action: flowAction, decision: .threwException))
                 status = .endedByThrowable
+                request.error = error
                 lock.unlock()
                 throw error
             }
