@@ -33,13 +33,13 @@ extension APIFlowAction {
                     DispatchQueue.global().async {
                         urlSession.dataTask(
                             with: urlRequest,
-                            completionHandler: completionHandler)
+                            completionHandler: completionHandler).resume()
                     }
                 } else if let url = flow.request.url {
                     DispatchQueue.global().async {
                         urlSession.dataTask(
                             with: url,
-                            completionHandler: completionHandler)
+                            completionHandler: completionHandler).resume()
                     }
                 } else {
                     throw Errors.missingUrlOrUrlRequest

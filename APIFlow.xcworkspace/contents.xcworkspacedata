@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:APIFlowSample/APIFlowSample.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:APIFlow/APIFlow.xcodeproj">
    </FileRef>
 </Workspace>

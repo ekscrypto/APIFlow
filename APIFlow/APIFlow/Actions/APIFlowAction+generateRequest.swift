@@ -9,7 +9,7 @@
 import Foundation
 
 extension APIFlowAction {
-    public static func prepareRequest(
+    public static func generateRequest(
         url: URL? = nil,
         method: String = "GET",
         cachePolicy: URLRequest.CachePolicy = URLRequest.CachePolicy.returnCacheDataElseLoad,
@@ -36,6 +36,6 @@ extension APIFlowAction {
             flow.request.urlRequest = urlRequest
             return APIFlow.FlowControl.flowThrough
         }
-        return APIFlowAction(name: "Generate GET request", action: action)
+        return APIFlowAction(name: "Generate \(method) request", action: action)
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class APIFlow {
+public class APIFlow {
 
     public enum FlowControl {
         case flowThrough
@@ -48,9 +48,9 @@ class APIFlow {
     private var nextAction: Int = 0
     private let lock = NSLock()
 
-    init(name: String = "", request: APIFlowRequest = APIFlowRequest(), actions: [APIFlowAction]) {
+    public init(name: String = "", request: APIFlowRequest? = nil, actions: [APIFlowAction]) {
         self.name = name
-        self.request = request
+        self.request = request ?? APIFlowRequest()
         self.actions = actions
         self.logs = []
         self.status = .initialized

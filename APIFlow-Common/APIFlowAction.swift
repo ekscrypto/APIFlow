@@ -6,7 +6,7 @@
 //  Copyright © 2019 Appcom. All rights reserved.
 //
 
-class APIFlowAction {
+public class APIFlowAction {
 
     typealias Action = ((_: APIFlow) throws -> APIFlow.FlowControl)
 

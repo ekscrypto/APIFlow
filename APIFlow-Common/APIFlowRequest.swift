@@ -8,12 +8,12 @@
 
 import Foundation
 
-class APIFlowRequest {
-    var url: URL?
-    var urlRequest: URLRequest?
-    var urlSession: URLSession?
-    var requestData: Data?
-    var responseData: Data?
-    var urlResponse: URLResponse?
-    var error: Error?
+public class APIFlowRequest {
+    public var url: URL?
+    public var urlRequest: URLRequest?
+    public var urlSession: URLSession?
+    public var requestData: Data?
+    public var responseData: Data?
+    public var urlResponse: URLResponse?
+    public var error: Error?
 }

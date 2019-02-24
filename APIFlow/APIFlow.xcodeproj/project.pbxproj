@@ -23,6 +23,7 @@
 		780BF95F2221D98E002BDD04 /* APIFlowAction+decodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF95E2221D98E002BDD04 /* APIFlowAction+decodeTests.swift */; };
 		780BF9612221DB0F002BDD04 /* APIFlowAction+dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF9602221DB0F002BDD04 /* APIFlowAction+dispatch.swift */; };
 		780BF9652221E1ED002BDD04 /* APIFlowAction+encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF9642221E1ED002BDD04 /* APIFlowAction+encode.swift */; };
+		780BF9902221F1ED002BDD04 /* APIFlowAction+dumpResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF98F2221F1ED002BDD04 /* APIFlowAction+dumpResponseData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		780BF95E2221D98E002BDD04 /* APIFlowAction+decodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "APIFlowAction+decodeTests.swift"; path = "APIFlowTests/APIFlowAction+decodeTests.swift"; sourceTree = SOURCE_ROOT; };
 		780BF9602221DB0F002BDD04 /* APIFlowAction+dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIFlowAction+dispatch.swift"; sourceTree = "<group>"; };
 		780BF9642221E1ED002BDD04 /* APIFlowAction+encode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIFlowAction+encode.swift"; sourceTree = "<group>"; };
+		780BF98F2221F1ED002BDD04 /* APIFlowAction+dumpResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIFlowAction+dumpResponseData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				780BF94222219178002BDD04 /* APIFlowAction+generateRequest.swift */,
 				780BF9642221E1ED002BDD04 /* APIFlowAction+encode.swift */,
 				780BF9602221DB0F002BDD04 /* APIFlowAction+dispatch.swift */,
+				780BF98F2221F1ED002BDD04 /* APIFlowAction+dumpResponseData.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				780BF94922219178002BDD04 /* APIFlowRequest.swift in Sources */,
+				780BF9902221F1ED002BDD04 /* APIFlowAction+dumpResponseData.swift in Sources */,
 				780BF94C22219178002BDD04 /* APIFlowAction+decode.swift in Sources */,
 				780BF9612221DB0F002BDD04 /* APIFlowAction+dispatch.swift in Sources */,
 				780BF94A22219178002BDD04 /* APIFlow.swift in Sources */,

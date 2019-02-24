@@ -11,7 +11,7 @@ import Foundation
 extension APIFlowAction {
     public static func upon<T: Decodable>(
         decoding: T.Type,
-        named actionName: String = "JSONDecoder.decode",
+        named actionName: String? = nil,
         do successAction: @escaping ((_: T, _: APIFlowRequest) -> APIFlow.FlowControl))
         -> APIFlowAction
     {
@@ -24,6 +24,6 @@ extension APIFlowAction {
                 return APIFlow.FlowControl.flowThrough
             }
         }
-        return APIFlowAction(name: actionName, action: action)
+        return APIFlowAction(name: actionName ?? "JSONDecoder.decode \(T.self)", action: action)
     }
 }
